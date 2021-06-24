@@ -11,6 +11,50 @@
     {
       "id": 3,
       "product": "rice"
+    },
+    {
+      "product": "water",
+      "id": 4
+    },
+    {
+      "product": "vodka",
+      "id": 5
+    },
+    {
+      "product": "chesse",
+      "id": 6
+    },
+    {
+      "product": "cup",
+      "id": 7
+    },
+    {
+      "product": "jar",
+      "id": 8
+    },
+    {
+      "product": "car",
+      "id": 9
+    },
+    {
+      "product": "apple",
+      "id": 10
+    },
+    {
+      "product": "pear",
+      "id": 11
+    },
+    {
+      "product": "cola",
+      "id": 12
+    },
+    {
+      "product": "7up",
+      "id": 13
+    },
+    {
+      "product": "rum",
+      "id": 14
     }
   ]
 }
