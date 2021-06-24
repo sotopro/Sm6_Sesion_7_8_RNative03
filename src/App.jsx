@@ -1,47 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import Todo from './shared/components/todo';
-import TodoForm from './shared/components/todo-form';
+import { getList } from './shared/services/list';
 
 const  App = () => {
-  const [todos, setTodos] = useState([
-    {text: 'Learn about React', isCompleted: false},
-    {text: 'Meet friends for lunch', isCompleted: false},
-    {text: 'build really cool todo app', isCompleted: false}
-  ]);
+  const [list, setList] = useState([])
 
-  const addTodo = (text) => {
-    const newTodos = [...todos, {text}];
-    setTodos(newTodos)
-  }
-  
-  const completeTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos[index].isCompleted = true;
-    setTodos(newTodos)
-  }
-
-  const removeTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos)
-  }
-
+  useEffect(() => {
+    let mounted = true;
+    getList()
+      .then((items) => {
+        if(mounted) {
+          setList(items)
+        }
+      })
+    return () => mounted = false
+  }, [])
   return (
-    <div className="app">
-      <h1>Todo App</h1>
-      <div className="todo-list">
-        {todos.map((item, index) => (
-          <Todo
-            key={index}
-            todo={item}
-            index={index}
-            completeTodo={completeTodo}
-            removeTodo={removeTodo}
-            />
-        ))}
-        <TodoForm addTodo={addTodo}/>
-      </div>
+    <div className="wrapper">
+      <h1>My Grocery List</h1>
+      <ul>
+        {list.map((item) => <li>{item.product}</li>)}
+      </ul>
     </div>
   );
 }

@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "product": "bread"
+    },
+    {
+      "id": 2,
+      "product": "grapes"
+    },
+    {
+      "id": 3,
+      "product": "rice"
+    }
+  ]
+}
