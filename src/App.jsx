@@ -21,15 +21,27 @@ const  App = () => {
     setTodos(newTodos)
   }
 
+  const removeTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos)
+  }
+
   return (
     <div className="app">
       <h1>Todo App</h1>
       <div className="todo-list">
         {todos.map((item, index) => (
-          <Todo key={index} todo={item} index={index} completeTodo={completeTodo}/>
+          <Todo
+            key={index}
+            todo={item}
+            index={index}
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
+            />
         ))}
+        <TodoForm addTodo={addTodo}/>
       </div>
-      <TodoForm addTodo={addTodo}/>
     </div>
   );
 }
