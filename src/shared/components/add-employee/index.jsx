@@ -70,7 +70,9 @@ export const AddEmployee = () => {
                         />
                     </div>
                     <div className="flex items-center justify-between">
-                        <button className="mt-5 bg-green-400 w-full hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        <button 
+                        className="mt-5 bg-green-400 w-full hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        >
                             Add Employee
                         </button>
                     </div>

@@ -73,8 +73,8 @@ export const EditEmployee = (route) => {
                         </label>
                         <input 
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:text-gray-600"
-                            value={selectedUser.location}
-                            onChange={(e) => handleOnChange("designaton", e.target.value)}
+                            value={selectedUser.designation}
+                            onChange={(e) => handleOnChange("designation", e.target.value)}
                             type="text"
                             placeholder="Enter designation"
                         />

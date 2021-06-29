@@ -12,7 +12,7 @@ export const EmployeeList = () => {
                 <>
                     {employees.map((employee) => (
                         <div
-                            className="flex items-center bg-gray-100 mb-10 shadow"
+                            className="flex items-center bg-gray-100 shadow"
                             key={employee.id}
                         >
                             <div className="flex-auto text-left px-4 py-2 m-2">

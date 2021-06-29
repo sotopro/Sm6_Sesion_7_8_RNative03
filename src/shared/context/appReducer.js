@@ -3,7 +3,7 @@ export const appReducer = (state, action) => {
         case "ADD_EMPLOYEE":
             return {
                 ...state,
-                employees: [...state, action.payload]
+                employees: [...state.employees, action.payload]
             }
         case 'EDIT_EMPLOYEE':
             const updatedEmployee = action.payload;
